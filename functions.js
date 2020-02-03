@@ -76,7 +76,6 @@ function squareOrDouble(n) {
  */
 function ageFromBirthDate(birthDate) {
   const _MS_PER_YEAR = 1000 * 60 * 60 * 24 * 365;
-  const day = ;
 }
 
 ageFromBirthDate("19870506");
