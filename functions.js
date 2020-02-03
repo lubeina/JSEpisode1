@@ -5,8 +5,8 @@
  * - logs "Hello <name>" if there is a name
  */
 function greet(name) {
-  if (name === undefined) console.log("Hello");
-  else console.log(`Hello ${name}`);
+  if (name) console.log(`Hello ${name}`);
+  else console.log("Hello");
 }
 
 /**
@@ -76,6 +76,15 @@ function squareOrDouble(n) {
  */
 function ageFromBirthDate(birthDate) {
   const _MS_PER_YEAR = 1000 * 60 * 60 * 24 * 365;
+
+  const year = birthDate.slice(0, 4);
+  const month = birthDate.slice(4, 6);
+  const day = birthDate.slice(6);
+
+  const today = new Date();
+  const dob = new Date(`${year}-${month}-${day}`);
+
+  return Math.floor((today - dob) / _MS_PER_YEAR);
 }
 
 module.exports = {
