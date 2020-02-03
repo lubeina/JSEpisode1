@@ -5,7 +5,8 @@
  * - logs "Hello <name>" if there is a name
  */
 function greet(name) {
-  // Your code here
+  if (name === undefined) console.log("Hello");
+  else console.log(`Hello ${name}`);
 }
 
 /**
@@ -14,7 +15,9 @@ function greet(name) {
  * - returns true if it's odd, false otherwise
  */
 function isOdd(n) {
-  // Your code here
+  if (n % 2 !== 0) {
+    return true;
+  } else return false;
 }
 
 /**
@@ -29,7 +32,11 @@ function isOdd(n) {
  * Hint: you can solve this without writing any loops!
  */
 function oddsSmallerThan(n) {
-  // Your code here
+  if (n % 2 !== 0) {
+    return (n - 1) / 2;
+  } else {
+    return n / 2;
+  }
 }
 
 /**
@@ -43,6 +50,11 @@ function oddsSmallerThan(n) {
  * squareOrDouble(9) -> 81
  */
 function squareOrDouble(n) {
+  if (n % 2 !== 0) {
+    return n * n;
+  } else {
+    return n * 2;
+  }
   // Your code here
 }
 
@@ -64,9 +76,10 @@ function squareOrDouble(n) {
  */
 function ageFromBirthDate(birthDate) {
   const _MS_PER_YEAR = 1000 * 60 * 60 * 24 * 365;
-
-  // Your code here
+  const day = ;
 }
+
+ageFromBirthDate("19870506");
 
 module.exports = {
   greet,
